@@ -55,12 +55,12 @@ h2{
 
 /* links e buttons*/
 a{
-    color: var(--light-green);
+    color: var(--green);
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--green);
+    color: var(--light-green);
 
 }
 
@@ -91,6 +91,7 @@ button:hover {
     border: 2px var(--red) solid;
     border-radius: 0.25rem;
     height: 50px;
+    display: flex;
     align-items: center;
     justify-content: center;
     opacity: 0.6;
@@ -143,7 +144,7 @@ header{
 .card p{
     font-size: 2rem;
     line-height: 3rem;
-
+    white-space: nowrap;
     margin-top: 1rem;
 }
 
@@ -223,15 +224,18 @@ td.expense{
     justify-content: center;
     opacity: 0;
     visibility: hidden;
+    z-index: 999;
 }
 .modal-overlay.active{
     opacity: 1;
     visibility: visible;
 }
 
-.modal {
+.modal{
     background-color: #F0F2f5;
     padding: 2.4rem;
+    position: relative;
+    z-index: 1;
 }
 
 /*form====================*/
@@ -246,7 +250,7 @@ td.expense{
 input {
     border: none;
     border-radius: 0.2rem;
-    padding: 0.8 rem;
+    padding: 0.8rem;
 
     width: 100%;
 }
@@ -255,7 +259,7 @@ input {
     margin-top: 0.8rem;
 }
 
-.input-group small {
+.input-group .help {
     opacity: 0.4;
 }
 
